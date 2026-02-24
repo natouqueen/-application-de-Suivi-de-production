@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="fpdf184">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/vendor/fpdf/fpdf184.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

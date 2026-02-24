@@ -1,0 +1,204 @@
+/* ===== Reset minimal ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* ===== Animation fond ===== */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== Container ===== */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* ===== Card ===== */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/* ===== Titles ===== */
+.card h2, .card h3 {
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+/* Emoji dans titre principal */
+.card h2::before {
+    content: "🔑 ";
+    font-size: 2rem;
+    margin-right: 6px;
+}
+
+/* ===== Error messages ===== */
+p {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* ===== Form ===== */
+.form-row div {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Inputs */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 8px rgba(255,111,97,0.4);
+    outline: none;
+}
+
+/* ===== Buttons ===== */
+button.btn-primary {
+    background: linear-gradient(45deg, #ff6f61, #ffb347);
+    color: #fff;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button.btn-primary:hover {
+    background: linear-gradient(45deg, #ffb347, #ff6f61);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* ===== Dashboard grid ===== */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-bottom: 16px;
+}
+
+/* ===== Navbar ===== */
+nav {
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    padding: 12px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+nav a:hover {
+    opacity: 0.85;
+}
+
+/* Emoji wave animation */
+@keyframes waveAnimation {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(14deg); }
+    30% { transform: rotate(-8deg); }
+    40% { transform: rotate(14deg); }
+    50% { transform: rotate(-4deg); }
+    60% { transform: rotate(10deg); }
+    70% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.wave {
+    display: inline-block;
+    animation: waveAnimation 2s infinite;
+    transform-origin: 70% 70%;
+    margin-right:6px;
+}
+
+/* Logout button */
+.btn-logout {
+    background: #ff4d4d;
+    padding: 6px 14px;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background: #ff6666;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Footer info */
+.footer {
+    margin-top: 20px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+    .card {
+        padding: 25px 15px;
+    }
+    nav {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    .btn-logout {
+        padding: 6px 10px;
+    }
+}
