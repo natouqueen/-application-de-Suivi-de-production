@@ -1,0 +1,22 @@
+# Fichiers de base de données
+*.sql
+*.sqlite
+*.db
+
+# Fichiers temporaires
+*.tmp
+*.log
+
+# Node_modules (si pas déjà ignoré)
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
