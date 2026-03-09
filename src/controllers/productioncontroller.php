@@ -1,7 +1,9 @@
 <?php
 require_once __DIR__ . "/../models/Production.php";
+require_once __DIR__ . "/../models/Produit.php"; // Modèle uniquement, pas le contrôleur
 
 $productionModel = new Production();
+$produitModel = new Produit();
 
 // Ajouter une production
 function ajouterProduction($id_produit, $quantite, $date_production) {
@@ -65,8 +67,7 @@ if (isset($_GET['supprimer'])) {
 
 // Charger les données
 $productions = listerProductions();
-require_once __DIR__ . "/produitController.php";
-$produits = listerProduits();
+$produits = $produitModel->lister();
 $productionEdit = isset($_GET['modifier']) ? trouverProductionParId($_GET['modifier']) : null;
 
 // Inclure la vue

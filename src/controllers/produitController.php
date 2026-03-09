@@ -1,8 +1,9 @@
 <?php
 require_once __DIR__ . "/../models/Produit.php";
-require_once __DIR__ . "/fournisseurController.php"; // Pour récupérer la liste des fournisseurs
+require_once __DIR__ . "/../models/Fournisseur.php"; // Modèle uniquement, pas le contrôleur
 
 $produitModel = new Produit();
+$fournisseurModel = new Fournisseur();
 
 // Action : Lister
 if (isset($_GET['action']) && $_GET['action'] === 'list') {
@@ -53,7 +54,7 @@ if ($role == 2) $redirect = "dashboard_operateur.php"; // Opérateur
 elseif ($role == 3) $redirect = "dashboard_user.php"; // Utilisateur simple
 
 // Récupérer les fournisseurs pour le <select>
-$fournisseurs = listerFournisseurs();
+$fournisseurs = $fournisseurModel->lister();
 
 // Ajouter
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])) {

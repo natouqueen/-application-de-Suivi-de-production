@@ -44,7 +44,7 @@
                 <td><?= $p['id_produit'] ?></td>
                 <td><?= htmlspecialchars($p['nom']) ?></td>
                 <td><?= htmlspecialchars($p['prix']) ?></td>
-                <td><?= htmlspecialchars($p['fournisseur_nom']) ?></td>
+                <td><?= htmlspecialchars($p['fournisseur_nom'] ?? '') ?></td>
                 <td>
                     <a href="?modifier=<?= $p['id_produit'] ?>">✏️modifier</a> |
                     <a href="?supprimer=<?= $p['id_produit'] ?>" onclick="return confirm('Supprimer ce produit ?')">❌supprimer</a>

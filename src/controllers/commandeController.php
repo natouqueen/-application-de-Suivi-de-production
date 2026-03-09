@@ -1,7 +1,9 @@
 <?php
 require_once __DIR__ . "/../models/Commande.php";
+require_once __DIR__ . "/../models/Client.php"; // Modèle uniquement, pas le contrôleur
 
 $commandeModel = new Commande();
+$clientModel = new Client();
 
 // Ajouter une commande
 function ajouterCommande($id_client, $produit, $quantite, $date_commande) {
@@ -63,8 +65,7 @@ if (isset($_GET['supprimer'])) {
 
 // Charger les données
 $commandes = listerCommandes();
-require_once __DIR__ . "/clientController.php";
-$clients = listerClients(); // récupère tous les clients
+$clients = $clientModel->lister(); // récupère tous les clients
 $commandeEdit = isset($_GET['modifier']) ? trouverCommandeParId($_GET['modifier']) : null;
 
 // Inclure la vue

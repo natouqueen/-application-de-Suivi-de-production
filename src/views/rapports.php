@@ -96,7 +96,13 @@
 <?php include __DIR__ . "/../../templates/footer.php"; ?>
 
 <style>
-.main-content { padding: 30px 20px; font-family: "Segoe UI", Arial, sans-serif; background: #f0f5fa; min-height: 100vh; }
+.main-content { 
+    padding: 30px 20px; 
+    font-family: "Segoe UI", Arial, sans-serif; 
+    background: #f0f5fa; 
+    min-height: 100vh; 
+}
+
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 h1 { font-size: 1.8rem; color: #0e5d96; margin-bottom: 20px; border-left: 5px solid #0e5d96; padding-left: 15px; }
 

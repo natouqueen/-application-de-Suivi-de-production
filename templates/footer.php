@@ -2,8 +2,7 @@
 <footer class="footer">
     <div class="footer-container">
         <p>© <?= date("Y") ?> - Huilerie | Tous droits réservés.</p>
-        <p>Connecté en tant que : <strong><?= htmlspecialchars($_SESSION['user']['nom']) ?></strong> <span class="wave">👋</span></p> 
-        <p class="dev-info">Développé par L'Etudiante MEFENZA❤️ pour la gestion moderne</p>
+        <p>Connecté en tant que : <strong><?= htmlspecialchars($_SESSION['user']['nom']) ?></strong> <span class="wave"></span></p> 
     </div>
 </footer>
 
